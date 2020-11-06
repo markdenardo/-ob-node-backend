@@ -15,7 +15,7 @@ let cards = [
         "type": "card",
         "attributes": {
             "strategy": "Abandon normal instruments",
-            "notes": [
+            "cards": [
                 {
                     "id": 1,
                     "text": "wrote a song for the Scorpius constellation",
@@ -15300,6 +15300,16 @@ app.get('/', (request, response) => {
 
 app.get('/api/cards', (request, response) => {
     response.json(cards)
+})
+
+app.get('/api/cards/:id', (request, response) => {
+    const id = request.params.id
+    const card = cards.find(card => {
+        console.log(card.id, typeof card.id, id, typeof id, card.id === id)
+        return card.id === id
+    })
+    console.log(card)
+    response.json(card)
 })
 
 const PORT = 3001
