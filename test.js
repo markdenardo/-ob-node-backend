@@ -15,7 +15,7 @@ let cards = [
         "type": "card",
         "attributes": {
             "strategy": "Abandon normal instruments",
-            "cards": [
+            "notes": [
                 {
                     "id": 1,
                     "text": "wrote a song for the Scorpius constellation",
@@ -15309,6 +15309,20 @@ app.get('/api/cards/:id', (request, response) => {
         return card.id === id
     })
     console.log(card)
+    response.json(card)
+})
+
+app.delete('/api/cards/:id', (request, response) => {
+    const id = Number(request.params.id)
+    cards = cards.filter(card => card.id !== id)
+
+    response.status(204).end()
+})
+
+app.post('/api/cards', (request, response) => {
+    const card = request.body
+    console.log(card)
+
     response.json(card)
 })
 
