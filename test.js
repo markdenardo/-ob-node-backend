@@ -3501,6 +3501,14 @@ let cards = [
         }
     },
     {
+        "id": "107",
+        "type": "card",
+        "attributes": {
+            "strategy": "Make many mistakes",
+            "notes": []
+        }
+    },
+    {
         "id": "108",
         "type": "card",
         "attributes": {
@@ -15277,14 +15285,6 @@ let cards = [
         "type": "card",
         "attributes": {
             "strategy": "Your mistake was a hidden intention",
-            "notes": []
-        }
-    },
-    {
-        "id": "107",
-        "type": "card",
-        "attributes": {
-            "strategy": "Make many mistakes",
             "notes": []
         }
     }
